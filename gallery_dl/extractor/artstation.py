@@ -28,7 +28,6 @@ class ArtstationExtractor(Extractor):
     def __init__(self, match):
         Extractor.__init__(self, match)
         self.user = match.group(1) or match.group(2)
-        self.config("user-agent")='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36'
 
     def items(self):
         videos = self.config("videos", True)
